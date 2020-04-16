@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
 		printf("1. WSAStartup failed: %d\n", iResult);
 		return 1;
 	}
-	printf("1. WSAStartup successed.\n", iResult);
+	printf("1. WSAStartup successed.\n");
 
 	//2. Create a socket
 	SOCKET ListenSocket = INVALID_SOCKET;
@@ -38,21 +38,21 @@ int main(int argc, char* argv[])
 		WSACleanup();
 		return 1;
 	}
-	printf("2.b. socket successed.\n", iResult);
+	printf("2.b. socket successed.\n");
 
 	//3. Prepare to obtain Client connection
 	//3.a. Bind the socket
 	sockaddr_in service;
 	service.sin_family = AF_INET;
 	service.sin_addr.s_addr = inet_addr("127.0.0.1");
-	service.sin_port = htons(27015);
+	service.sin_port = htons(27016);
 	iResult = bind(ListenSocket, (SOCKADDR*)&service, sizeof(service));
 	if (iResult == SOCKET_ERROR) {
 		printf("3.a. bind failed: %d\n", WSAGetLastError());
 		WSACleanup();
 		return 1;
 	}
-	printf("3.a. bind successed.\n", iResult);
+	printf("3.a. bind successed.\n");
 
 	//3.b. Listen on the socket
 	if (listen(ListenSocket, SOMAXCONN) == SOCKET_ERROR) {
@@ -61,7 +61,7 @@ int main(int argc, char* argv[])
 		WSACleanup();
 		return 1;
 	}
-	printf("3.b. listen successed.\n", iResult);
+	printf("3.b. listen successed.\n");
 
 	//3.c. Accept a connection
 	SOCKET ClientSocket;
@@ -73,7 +73,7 @@ int main(int argc, char* argv[])
 		WSACleanup();
 		return 1;
 	}
-	printf("3.c. accept successed.\n", iResult);
+	printf("3.c. accept successed.\n");
 
 	//4. Send/Receive data
 	char recvbuf[DEFAULT_BUFLEN];

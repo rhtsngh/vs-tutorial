@@ -40,7 +40,7 @@ int main(int argc, char** argv)
 	sockaddr_in clientService;
 	clientService.sin_family = AF_INET;
 	clientService.sin_addr.s_addr = inet_addr("127.0.0.1");
-	clientService.sin_port = htons(27015);
+	clientService.sin_port = htons(27016);
 	iResult = connect(ConnectSocket, (SOCKADDR*)&clientService, sizeof(clientService));
 	if (iResult == SOCKET_ERROR) {
 		closesocket(ConnectSocket);
