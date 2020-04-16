@@ -20,7 +20,7 @@
 ![](photos/02.PNG)
         - by selecting `Configuration Properties > Linker > Input` then add to `Additional Dependencies`: `MathLibrary.lib`
 ![](photos/03.PNG)
-    - copy built `<LIBRARY>.dll` to project automatically each time it run(to update the latest version of library)
+    - copy built `<LIBRARY>.dll` to project automatically each time it run(to update the latest version of library): `xcopy /y /d "..\SimpleDLL\$(IntDir)SimpleDLL.dll" "$(OutDir)"`
 ![](photos/04.PNG)
  - finally, to use the library, just include header file and call its exported variable like below:
 ![](photos/14.PNG)
