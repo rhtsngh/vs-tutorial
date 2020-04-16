@@ -27,6 +27,9 @@
     <ClCompile Include="x05Events.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="x06EventInClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">

@@ -151,6 +151,7 @@
     <ClCompile Include="x01SynchronizationBetweenThreads.cpp" />
     <ClCompile Include="x04Semaphore.cpp" />
     <ClCompile Include="x05Events.cpp" />
+    <ClCompile Include="x06EventInClass.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h" />
