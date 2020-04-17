@@ -91,14 +91,14 @@ void TcpServer::sendData(const char * data)
 	}
 	printf("4.a. send successed: %d\n", iResult);
 
-	iResult = shutdown(m_clientSocket, SD_SEND);
-	if (iResult == SOCKET_ERROR) {
-		printf("4.b. shutdown sending failed: %d\n", WSAGetLastError());
-		closesocket(m_clientSocket);
-		WSACleanup();
-		return;
-	}
-	printf("4.b. shutdown sending successed.\n");
+	//iResult = shutdown(m_clientSocket, SD_SEND);
+	//if (iResult == SOCKET_ERROR) {
+	//	printf("4.b. shutdown sending failed: %d\n", WSAGetLastError());
+	//	closesocket(m_clientSocket);
+	//	WSACleanup();
+	//	return;
+	//}
+	//printf("4.b. shutdown sending successed.\n");
 }
 char* TcpServer::recvData()
 {

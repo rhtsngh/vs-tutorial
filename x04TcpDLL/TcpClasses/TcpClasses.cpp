@@ -13,18 +13,20 @@ int main()
     const char* address = "127.0.0.1";
     WORD port = 27016;
 
-    //TcpServer server;
-    //server.createSocket();
-    //server.bindSocket(address, port);
-    //server.listenSocket();
-    //server.acceptConnection();
-    //char * data = server.recvData();
-    //printf(" - Data: %s\n", data);
+    TcpServer server;
+    server.createSocket();
+    server.bindSocket(address, port);
+    server.listenSocket();
+    server.acceptConnection();
+    char * data = server.recvData();
+    printf(" - Data: %s\n", data);
+    server.sendData("What's up Client?");
+    while (1) {};
 
-    TcpClient client;
-    client.createSocket();
-    client.connectServer(address, port);
-    client.sendData("HIHIHI");
+    //TcpClient client;
+    //client.createSocket();
+    //client.connectServer(address, port);
+    //client.sendData("HIHIHI");
 
     return 0;
 }
