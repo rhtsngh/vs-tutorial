@@ -4,6 +4,11 @@
 #include <iostream>
 #include "TcpServerBridge.h"
 
+void messageReceived(messageStruct* s)
+{
+    std::cout << "Server received: " << s->message << std::endl;
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
@@ -11,16 +16,26 @@ int main()
     const char* address = "127.0.0.1";
     WORD port = 27016;
 
+    //HANDLE handler;
+    //handler = Server::CreateInstance();
+    //Server::CreateSocket((TcpServer*)handler);
+    //Server::BindSocket((TcpServer*)handler, address, port);
+    //Server::ListenSocket((TcpServer*)handler);
+    //Server::AcceptConnection((TcpServer*)handler);
+    //char* data = Server::RecvData((TcpServer*)handler);
+    //std::cout << "Got data: " << data << std::endl;
+    //Server::SendData((TcpServer*)handler, "Hello Client");
+    //Server::DisposeInstance((TcpServer*)handler);
+
     HANDLE handler;
-    handler = Server::CreateInstance();
-    Server::CreateSocket((TcpServer*)handler);
-    Server::BindSocket((TcpServer*)handler, address, port);
-    Server::ListenSocket((TcpServer*)handler);
-    Server::AcceptConnection((TcpServer*)handler);
-    char* data = Server::RecvData((TcpServer*)handler);
-    std::cout << "Got data: " << data << std::endl;
-    Server::SendData((TcpServer*)handler, "Hello Client");
-    Server::DisposeInstance((TcpServer*)handler);
+    handler = ServerCreateInstance(address, port);
+    ServerWaitForConnected((TcpServer*)handler);
+    ServerSetMessageCallback((TcpServer*)handler, &messageReceived);
+    //char* data = ServerRecvData((TcpServer*)handler);
+    //std::cout << "Got data: " << data << std::endl;
+    ServerSendData((TcpServer*)handler, "Hello Client");
+    while (1) {};
+    ServerDisposeInstance((TcpServer*)handler);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
