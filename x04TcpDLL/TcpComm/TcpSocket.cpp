@@ -104,14 +104,15 @@ void TcpSocket::sendData(const char* data)
 	printf("4.a. send successed: %d\n", iResult);
 }
 
-char* TcpSocket::recvData()
+std::string TcpSocket::recvData()
 {
 	int iResult;
 
 	iResult = recv(tcpSocket, buffer, DEFAULT_BUFLEN, 0);
-	if (isReceivingFailed(iResult)) return NULL;
-
-	return buffer;
+	if (isReceivingFailed(iResult)) return "";
+	std::string data(buffer);//make a copy of buffer
+	memset(&buffer, 0, sizeof(buffer));//clear buffer after popping data(to avoid the fact that new message has old data of old message)
+	return data;
 }
 
 
@@ -133,11 +134,11 @@ void TcpSocket::startThread()
 {
 	while (1) {
 		if (connected) {
-			char* data = recvData();
+			std::string data = recvData();
 
 			if (!errorWhileReceiving)
 			{
-				messageStruct message(buffer);
+				messageStruct message(data);
 				callback(&message);
 			}
 		}

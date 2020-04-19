@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <string>
 #include "TcpSocketBridge.h"
 
 void messageReceived(messageStruct* s)
@@ -16,6 +17,7 @@ int main()
     const char* address = "127.0.0.1";
     WORD port = 27016;
 
+    //APIv0.2.0
     //HANDLE handler;
     //handler = Client::CreateInstance();
     //Client::CreateSocket((TcpClient*)handler);
@@ -25,6 +27,7 @@ int main()
     //std::cout << "Got data: " << data << std::endl;
     //Client::DisposeInstance((TcpClient*)handler);
 
+    //APIv1.0.0
     HANDLE handler;
     handler = ClientCreateInstance(address, port);
     ClientConnectToHost((TcpSocket*)handler);
@@ -32,15 +35,13 @@ int main()
     ClientSendData((TcpSocket*)handler, "Hello Server");
     //char* data = ClientRecvData((TcpSocket*)handler);
     //std::cout << "Got data: " << data << std::endl;
-    while (1) {};
+    std::string str;
+    while (1) {
+        std::cout << ">";
+        std::getline(std::cin, str);
+        ClientSendData((TcpSocket*)handler, str.c_str());
+    };
     ClientDisposeInstance((TcpSocket*)handler);
-
-    //TcpSocket client(address, port);
-    //client.connectToHost();
-    ////ClientSendData((TcpSocket*)handler, "Hello Server");
-    ////char* data = ClientRecvData((TcpSocket*)handler);
-    ////std::cout << "Got data: " << data << std::endl;
-    //client.disconnectFromHost();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

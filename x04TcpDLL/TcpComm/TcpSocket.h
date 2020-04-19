@@ -18,7 +18,7 @@ public:
 	int connectToHost();
 	void disconnectFromHost();
 	void sendData(const char * data);
-	char * recvData();
+	std::string recvData();
 	bool isConnected();
 	void setSocket(const SOCKET& establishedSocket);
 

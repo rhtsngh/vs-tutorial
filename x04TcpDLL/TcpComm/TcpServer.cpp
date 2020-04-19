@@ -80,9 +80,9 @@ void TcpServer::sendData(const char* data)
 	tcpClient.sendData(data);
 }
 
-char* TcpServer::recvData()
+std::string TcpServer::recvData()
 {
-	return (char*)tcpClient.recvData();
+	return tcpClient.recvData();
 }
 
 

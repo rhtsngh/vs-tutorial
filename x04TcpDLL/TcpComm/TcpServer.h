@@ -10,7 +10,7 @@ public:
 	void waitForConnected();
 	void close();
 	void sendData(const char* data);
-	char* recvData();
+	std::string recvData();
 
 	// these functions mustbe after connection established
 	void setMessageCallback(void (*callback_function)(messageStruct*));

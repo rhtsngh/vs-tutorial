@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <string>
 #include "TcpServerBridge.h"
 
 void messageReceived(messageStruct* s)
@@ -16,6 +17,7 @@ int main()
     const char* address = "127.0.0.1";
     WORD port = 27016;
 
+    //APIv0.2.0
     //HANDLE handler;
     //handler = Server::CreateInstance();
     //Server::CreateSocket((TcpServer*)handler);
@@ -27,14 +29,19 @@ int main()
     //Server::SendData((TcpServer*)handler, "Hello Client");
     //Server::DisposeInstance((TcpServer*)handler);
 
+    //APIv1.0.0
     HANDLE handler;
     handler = ServerCreateInstance(address, port);
     ServerWaitForConnected((TcpServer*)handler);
     ServerSetMessageCallback((TcpServer*)handler, &messageReceived);
     //char* data = ServerRecvData((TcpServer*)handler);
     //std::cout << "Got data: " << data << std::endl;
-    ServerSendData((TcpServer*)handler, "Hello Client");
-    while (1) {};
+    std::string str;
+    while (1) {
+        std::cout << ">";
+        std::getline(std::cin, str);
+        ServerSendData((TcpServer*)handler, str.c_str());
+    };
     ServerDisposeInstance((TcpServer*)handler);
 }
 

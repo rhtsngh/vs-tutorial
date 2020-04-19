@@ -33,7 +33,7 @@ extern "C" API void ClientSendData(TcpSocket * pClientInstance, const char* data
     pClientInstance->sendData(data);
 }
 
-extern "C" API char* ClientRecvData(TcpSocket * pClientInstance)
+extern "C" API std::string ClientRecvData(TcpSocket * pClientInstance)
 {
     return pClientInstance->recvData();
 }
@@ -41,7 +41,7 @@ extern "C" API char* ClientRecvData(TcpSocket * pClientInstance)
 
 extern "C" API bool ClientIsConnected(TcpSocket * pClientInstance)
 {
-    return pClientInstance->recvData();
+    return pClientInstance->isConnected();
 }
 
 extern "C" API void ClientSetMessageCallback(TcpSocket * pClientInstance, void (*callback_function)(messageStruct*))
