@@ -35,8 +35,9 @@ void TcpServer::initSocket()
 
 	addr.sin_family = AF_INET;
 	addr.sin_port = htons(port);
-	//InetPtonW(AF_INET, (PCWSTR)ip.c_str(), &addr.sin_addr.s_addr);
 	addr.sin_addr.s_addr = inet_addr(ip.c_str());
+	//InetPton(AF_INET, (PCWSTR)ip.c_str(), &addr.sin_addr);
+
 	iResult = bind(tcpServer, (SOCKADDR*)&addr, sizeof(addr));
 	if (iResult == SOCKET_ERROR) {
 		printf("3.a. bind failed: %d\n", WSAGetLastError());

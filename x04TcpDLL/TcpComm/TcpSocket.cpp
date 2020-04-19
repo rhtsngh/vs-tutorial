@@ -63,8 +63,9 @@ void TcpSocket::initSocket()
 
 	addr.sin_family = AF_INET;
 	addr.sin_port = htons(port);
-	//InetPtonW(AF_INET, (PCWSTR)ip.c_str(), &addr.sin_addr.s_addr);
 	addr.sin_addr.s_addr = inet_addr(ip.c_str());
+	//memset(&addr, 0, sizeof(addr));
+	//InetPton(AF_INET, (PCWSTR)ip.c_str(), &addr.sin_addr.s_addr);
 }
 
 int TcpSocket::connectToHost()
@@ -134,8 +135,6 @@ void TcpSocket::startThread()
 	while (1) {
 		if (connected) {
 			std::string data = recvData();
-
-			std::cout << " - startThread: " << data << std::endl;
 
 			if (!errorWhileReceiving)
 			{
