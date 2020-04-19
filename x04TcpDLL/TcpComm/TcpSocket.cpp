@@ -25,7 +25,6 @@ void TcpSocket::setSocket(const SOCKET& establishedSocket)
 {
 	tcpSocket = establishedSocket;
 	connected = true;
-	initParameters();
 }
 
 TcpSocket::~TcpSocket()
@@ -135,6 +134,8 @@ void TcpSocket::startThread()
 	while (1) {
 		if (connected) {
 			std::string data = recvData();
+
+			std::cout << " - startThread: " << data << std::endl;
 
 			if (!errorWhileReceiving)
 			{

@@ -33,9 +33,9 @@ extern "C" API void ServerSendData(TcpServer * pServerInstance, const char* data
     pServerInstance->sendData(data);
 }
 
-extern "C" API std::string ServerRecvData(TcpServer * pServerInstance)
+extern "C" API char* ServerRecvData(TcpServer * pServerInstance)
 {
-    return pServerInstance->recvData();
+    return (char*)pServerInstance->recvData().c_str();
 }
 
 

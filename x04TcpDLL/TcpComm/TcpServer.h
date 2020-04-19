@@ -12,7 +12,6 @@ public:
 	void sendData(const char* data);
 	std::string recvData();
 
-	// these functions mustbe after connection established
 	void setMessageCallback(void (*callback_function)(messageStruct*));
 	void removeMessageCallback();
 	void setErrorCallback(void (*callback_function)(errorStruct*));

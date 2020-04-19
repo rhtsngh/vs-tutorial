@@ -32,8 +32,8 @@ int main()
     //APIv1.0.0
     HANDLE handler;
     handler = ServerCreateInstance(address, port);
-    ServerWaitForConnected((TcpServer*)handler);
     ServerSetMessageCallback((TcpServer*)handler, &messageReceived);
+    ServerWaitForConnected((TcpServer*)handler);
     //char* data = ServerRecvData((TcpServer*)handler);
     //std::cout << "Got data: " << data << std::endl;
     std::string str;

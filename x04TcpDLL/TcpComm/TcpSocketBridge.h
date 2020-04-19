@@ -13,7 +13,7 @@ extern "C" {
 	extern API void ClientConnectToHost(TcpSocket* pClientInstance);
 	extern API void ClientDisconnectFromHost(TcpSocket* pClientInstance);
 	extern API void ClientSendData(TcpSocket* pClientInstance, const char* data);
-	extern API std::string ClientRecvData(TcpSocket* pClientInstance);
+	extern API char* ClientRecvData(TcpSocket* pClientInstance);
 
 	extern API bool ClientIsConnected(TcpSocket* pClientInstance);
 	extern API void ClientSetMessageCallback(TcpSocket* pClientInstance, void (*callback_function)(messageStruct*));

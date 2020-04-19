@@ -30,8 +30,8 @@ int main()
     //APIv1.0.0
     HANDLE handler;
     handler = ClientCreateInstance(address, port);
-    ClientConnectToHost((TcpSocket*)handler);
     ClientSetMessageCallback((TcpSocket*)handler , &messageReceived);
+    ClientConnectToHost((TcpSocket*)handler);
     ClientSendData((TcpSocket*)handler, "Hello Server");
     //char* data = ClientRecvData((TcpSocket*)handler);
     //std::cout << "Got data: " << data << std::endl;

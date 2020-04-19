@@ -33,9 +33,9 @@ extern "C" API void ClientSendData(TcpSocket * pClientInstance, const char* data
     pClientInstance->sendData(data);
 }
 
-extern "C" API std::string ClientRecvData(TcpSocket * pClientInstance)
+extern "C" API char* ClientRecvData(TcpSocket * pClientInstance)
 {
-    return pClientInstance->recvData();
+    return (char*)pClientInstance->recvData().c_str();
 }
 
 
