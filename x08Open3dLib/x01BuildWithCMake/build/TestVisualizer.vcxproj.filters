@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\TestVisualizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0F2849E2-32C6-30CF-83C6-BD450D6793CC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

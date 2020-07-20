@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3455890A-9556-3845-9F89-72EFA91FF3AE}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>TestVisualizer</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TestVisualizer.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TestVisualizer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TestVisualizer.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TestVisualizer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">TestVisualizer.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">TestVisualizer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">TestVisualizer.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">TestVisualizer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\WORKSPACES\LIBRARIES\open3d_install\Release\include;D:\WORKSPACES\LIBRARIES\open3d_install\Release\include\Open3D\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_GLIBCXX_USE_CXX11_ABI=0;GLEW_STATIC;FMT_HEADER_ONLY=1;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_GLIBCXX_USE_CXX11_ABI=0;GLEW_STATIC;FMT_HEADER_ONLY=1;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\WORKSPACES\LIBRARIES\open3d_install\Release\include;D:\WORKSPACES\LIBRARIES\open3d_install\Release\include\Open3D\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\WORKSPACES\LIBRARIES\open3d_install\Release\include;D:\WORKSPACES\LIBRARIES\open3d_install\Release\include\Open3D\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_glew.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_glfw3.lib;gdi32.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_jpeg.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_jsoncpp.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_lzf.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_png.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_zlib.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_rply.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_tinyfiledialogs.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_qhullcpp.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_qhull_r.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/build/Debug/TestVisualizer.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/build/Debug/TestVisualizer.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\WORKSPACES\LIBRARIES\open3d_install\Release\include;D:\WORKSPACES\LIBRARIES\open3d_install\Release\include\Open3D\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_GLIBCXX_USE_CXX11_ABI=0;GLEW_STATIC;FMT_HEADER_ONLY=1;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_GLIBCXX_USE_CXX11_ABI=0;GLEW_STATIC;FMT_HEADER_ONLY=1;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\WORKSPACES\LIBRARIES\open3d_install\Release\include;D:\WORKSPACES\LIBRARIES\open3d_install\Release\include\Open3D\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\WORKSPACES\LIBRARIES\open3d_install\Release\include;D:\WORKSPACES\LIBRARIES\open3d_install\Release\include\Open3D\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_glew.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_glfw3.lib;gdi32.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_jpeg.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_jsoncpp.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_lzf.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_png.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_zlib.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_rply.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_tinyfiledialogs.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_qhullcpp.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_qhull_r.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/build/Release/TestVisualizer.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/build/Release/TestVisualizer.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\WORKSPACES\LIBRARIES\open3d_install\Release\include;D:\WORKSPACES\LIBRARIES\open3d_install\Release\include\Open3D\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_GLIBCXX_USE_CXX11_ABI=0;GLEW_STATIC;FMT_HEADER_ONLY=1;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_GLIBCXX_USE_CXX11_ABI=0;GLEW_STATIC;FMT_HEADER_ONLY=1;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\WORKSPACES\LIBRARIES\open3d_install\Release\include;D:\WORKSPACES\LIBRARIES\open3d_install\Release\include\Open3D\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\WORKSPACES\LIBRARIES\open3d_install\Release\include;D:\WORKSPACES\LIBRARIES\open3d_install\Release\include\Open3D\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_glew.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_glfw3.lib;gdi32.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_jpeg.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_jsoncpp.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_lzf.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_png.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_zlib.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_rply.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_tinyfiledialogs.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_qhullcpp.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_qhull_r.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/build/MinSizeRel/TestVisualizer.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/build/MinSizeRel/TestVisualizer.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\WORKSPACES\LIBRARIES\open3d_install\Release\include;D:\WORKSPACES\LIBRARIES\open3d_install\Release\include\Open3D\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_GLIBCXX_USE_CXX11_ABI=0;GLEW_STATIC;FMT_HEADER_ONLY=1;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_GLIBCXX_USE_CXX11_ABI=0;GLEW_STATIC;FMT_HEADER_ONLY=1;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\WORKSPACES\LIBRARIES\open3d_install\Release\include;D:\WORKSPACES\LIBRARIES\open3d_install\Release\include\Open3D\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\WORKSPACES\LIBRARIES\open3d_install\Release\include;D:\WORKSPACES\LIBRARIES\open3d_install\Release\include\Open3D\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_glew.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_glfw3.lib;gdi32.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_jpeg.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_jsoncpp.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_lzf.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_png.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_zlib.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_rply.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_tinyfiledialogs.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_qhullcpp.lib;D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib\Open3D_3rdparty_qhull_r.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/build/RelWithDebInfo/TestVisualizer.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/build/RelWithDebInfo/TestVisualizer.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Windows\Programs\cmake\x64\bin\cmake.exe -SD:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake -BD:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/build --check-stamp-file D:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\WORKSPACES\LIBRARIES\open3d_install\Release\CMake\Open3DConfig.cmake;D:\WORKSPACES\LIBRARIES\open3d_install\Release\CMake\Open3DConfigVersion.cmake;D:\WORKSPACES\LIBRARIES\open3d_install\Release\CMake\Open3DTargets-release.cmake;D:\WORKSPACES\LIBRARIES\open3d_install\Release\CMake\Open3DTargets.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\3.18.0\CMakeCCompiler.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\3.18.0\CMakeCXXCompiler.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\3.18.0\CMakeRCCompiler.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\3.18.0\CMakeSystem.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\FindOpenMP\OpenMPCheckVersion.c;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\FindOpenMP\OpenMPCheckVersion.cpp;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.c;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeCInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeCXXInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeFindDependencyMacro.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeRCInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CheckIncludeFile.c.in;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CheckIncludeFile.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CheckLibraryExists.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindOpenGL.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindOpenMP.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindPackageMessage.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindThreads.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\Windows.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Windows\Programs\cmake\x64\bin\cmake.exe -SD:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake -BD:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/build --check-stamp-file D:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\WORKSPACES\LIBRARIES\open3d_install\Release\CMake\Open3DConfig.cmake;D:\WORKSPACES\LIBRARIES\open3d_install\Release\CMake\Open3DConfigVersion.cmake;D:\WORKSPACES\LIBRARIES\open3d_install\Release\CMake\Open3DTargets-release.cmake;D:\WORKSPACES\LIBRARIES\open3d_install\Release\CMake\Open3DTargets.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\3.18.0\CMakeCCompiler.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\3.18.0\CMakeCXXCompiler.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\3.18.0\CMakeRCCompiler.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\3.18.0\CMakeSystem.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\FindOpenMP\OpenMPCheckVersion.c;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\FindOpenMP\OpenMPCheckVersion.cpp;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.c;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeCInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeCXXInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeFindDependencyMacro.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeRCInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CheckIncludeFile.c.in;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CheckIncludeFile.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CheckLibraryExists.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindOpenGL.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindOpenMP.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindPackageMessage.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindThreads.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\Windows.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Windows\Programs\cmake\x64\bin\cmake.exe -SD:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake -BD:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/build --check-stamp-file D:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\WORKSPACES\LIBRARIES\open3d_install\Release\CMake\Open3DConfig.cmake;D:\WORKSPACES\LIBRARIES\open3d_install\Release\CMake\Open3DConfigVersion.cmake;D:\WORKSPACES\LIBRARIES\open3d_install\Release\CMake\Open3DTargets-release.cmake;D:\WORKSPACES\LIBRARIES\open3d_install\Release\CMake\Open3DTargets.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\3.18.0\CMakeCCompiler.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\3.18.0\CMakeCXXCompiler.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\3.18.0\CMakeRCCompiler.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\3.18.0\CMakeSystem.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\FindOpenMP\OpenMPCheckVersion.c;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\FindOpenMP\OpenMPCheckVersion.cpp;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.c;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeCInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeCXXInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeFindDependencyMacro.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeRCInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CheckIncludeFile.c.in;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CheckIncludeFile.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CheckLibraryExists.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindOpenGL.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindOpenMP.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindPackageMessage.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindThreads.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\Windows.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Windows\Programs\cmake\x64\bin\cmake.exe -SD:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake -BD:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/build --check-stamp-file D:/WORKSPACES/VisualStudio/vs-tutorial/x08Open3dLib/x01BuildWithCMake/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\WORKSPACES\LIBRARIES\open3d_install\Release\CMake\Open3DConfig.cmake;D:\WORKSPACES\LIBRARIES\open3d_install\Release\CMake\Open3DConfigVersion.cmake;D:\WORKSPACES\LIBRARIES\open3d_install\Release\CMake\Open3DTargets-release.cmake;D:\WORKSPACES\LIBRARIES\open3d_install\Release\CMake\Open3DTargets.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\3.18.0\CMakeCCompiler.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\3.18.0\CMakeCXXCompiler.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\3.18.0\CMakeRCCompiler.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\3.18.0\CMakeSystem.cmake;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\FindOpenMP\OpenMPCheckVersion.c;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\FindOpenMP\OpenMPCheckVersion.cpp;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.c;D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\FindOpenMP\OpenMPTryFlag.cpp;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeCInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeCXXInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeFindDependencyMacro.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeRCInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CheckIncludeFile.c.in;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CheckIncludeFile.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\CheckLibraryExists.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindOpenGL.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindOpenMP.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindPackageMessage.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\FindThreads.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\Windows.cmake;D:\Windows\Programs\cmake\x64\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\TestVisualizer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\WORKSPACES\VisualStudio\vs-tutorial\x08Open3dLib\x01BuildWithCMake\build\ZERO_CHECK.vcxproj">
+      <Project>{8DD5D3D0-43E8-3C23-A311-9F91F696E68B}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
