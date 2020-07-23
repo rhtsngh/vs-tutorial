@@ -75,15 +75,11 @@ int main(int argc, char *argv[])
 	auto registration_result =
 		pipelines::registration::RegistrationRANSACBasedOnFeatureMatching(
 			*source, *target, *source_fpfh, *target_fpfh, 0.075,
-			pipelines::registration::
-			TransformationEstimationPointToPoint(false),
+			pipelines::registration::TransformationEstimationPointToPoint(false),
 			4, correspondence_checker,
-			pipelines::registration::RANSACConvergenceCriteria(4000000,
-				1000));
+			pipelines::registration::RANSACConvergenceCriteria(4000000, 1000));
 
-	if (visualize)
-		VisualizeRegistration(*source, *target,
-			registration_result.transformation_);
+	if (visualize) VisualizeRegistration(*source, *target, registration_result.transformation_);
 
 	return EXIT_SUCCESS;
 }

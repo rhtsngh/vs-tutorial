@@ -20,13 +20,13 @@
 > There are 2 way to build project using the library
 
 ### Build project by including manually
- - `C/C++`->`Additional Include Directories`**:** `D:\WORKSPACES\LIBRARIES\open3d_install\Release\include;D:\WORKSPACES\LIBRARIES\open3d_install\Release\include\Open3D\3rdparty;%(AdditionalIncludeDirectories)`
+ - `C/C++` -> `Additional Include Directories`**:** `D:\WORKSPACES\LIBRARIES\open3d_install\Release\include;D:\WORKSPACES\LIBRARIES\open3d_install\Release\include\Open3D\3rdparty;%(AdditionalIncludeDirectories)`
 ![](x02ManuallyIncludeLibrary/steps/Step01-Include-directories.PNG)
- - `C/C++ -> Preprocessor`->`Preprocessor Definitions`**:** `WIN32;_WINDOWS;<different options>`
+ - `C/C++ -> Preprocessor` -> `Preprocessor Definitions`**:** `WIN32;_WINDOWS;<different options>`
 ![](x02ManuallyIncludeLibrary/steps/Step02-Preprocessor-definition.PNG)
- - `Linker -> General`->`Additional Library Directories`**:** `D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib;%(AdditionalLibraryDirectories)`
+ - `Linker -> General` -> `Additional Library Directories`**:** `D:\WORKSPACES\LIBRARIES\open3d_install\Release\lib;%(AdditionalLibraryDirectories)`
 ![](x02ManuallyIncludeLibrary/steps/Step03-Lib-directories.PNG)
- - `Linker -> Input`->`Additional Dependencies`**:** `Open3D.lib;Open3D_3rdparty_glew.lib;Open3D_3rdparty_glfw3.lib;gdi32.lib;Open3D_3rdparty_jpeg.lib;Open3D_3rdparty_jsoncpp.lib;Open3D_3rdparty_lzf.lib;Open3D_3rdparty_png.lib;Open3D_3rdparty_zlib.lib;Open3D_3rdparty_rply.lib;Open3D_3rdparty_tinyfiledialogs.lib;Open3D_3rdparty_qhullcpp.lib;Open3D_3rdparty_qhull_r.lib;opengl32.lib;kernel32.lib;user32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;%(AdditionalDependencies)`
+ - `Linker -> Input` -> `Additional Dependencies`**:** `Open3D.lib;Open3D_3rdparty_glew.lib;Open3D_3rdparty_glfw3.lib;gdi32.lib;Open3D_3rdparty_jpeg.lib;Open3D_3rdparty_jsoncpp.lib;Open3D_3rdparty_lzf.lib;Open3D_3rdparty_png.lib;Open3D_3rdparty_zlib.lib;Open3D_3rdparty_rply.lib;Open3D_3rdparty_tinyfiledialogs.lib;Open3D_3rdparty_qhullcpp.lib;Open3D_3rdparty_qhull_r.lib;opengl32.lib;kernel32.lib;user32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;%(AdditionalDependencies)`
 ![](x02ManuallyIncludeLibrary/steps/Step04-Libs.PNG)
  - Finally, [in `*.cpp` include `Open3D.h` and run as usual](x02ManuallyIncludeLibrary/x02ManuallyIncludeLibrary/x02ManuallyIncludeLibrary.cpp).
 
