@@ -1,2 +1,3 @@
 # vs-tutorial
 Samples of Visual Studio C++, C#, .NET, WPF, UWP, ...
+#good tutorial for basics
